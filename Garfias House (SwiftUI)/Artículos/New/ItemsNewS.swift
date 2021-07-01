@@ -866,10 +866,31 @@ struct VarietyViewS: View {
                 ForEach($item.variedades) { $variedad in
                     if #available(iOS 15.0, *) {
                         VStack {
+                            /*
                             NavigationLink(destination: VariantEditViewS(variedad: variedad, onDisappear: { variety in
+                                print("ItemDetail, variety quantity: \(variedad.cantidad)")
                                 editing = false
                                 
                                 $variedad.wrappedValue = variety
+                                print("ItemDetail, variety quantity: \(variedad.cantidad)")
+                                item.setStatusForVarieties()
+                            }).onAppear(perform: {
+                                editing = true
+                            }).onDisappear(perform: {
+                                editing = false
+                            })) {
+                                VarietyRow(variedad: variedad)
+                            
+                            
+                            }
+                             */
+                            
+                            NavigationLink(destination: VariantEditViewSNew(variedad: $variedad, onDisappear: {
+                                print("ItemDetail, variety quantity: \(variedad.cantidad)")
+                                editing = false
+                                
+                                //$variedad.wrappedValue = variety
+                                item.setStatusForVarieties()
                             }).onAppear(perform: {
                                 editing = true
                             }).onDisappear(perform: {
@@ -908,6 +929,7 @@ struct VarietyViewS: View {
                             Button(role: .destructive, action: {
                                 if let i = item.variedades.firstIndex(where: {$0.id == variedad.id}) {
                                     item.variedades.remove(at: i)
+                                    item.setStatusForVarieties()
                                 }
                             }) {
                                 Image(systemName: "trash")
@@ -977,14 +999,6 @@ struct VarietyViewS: View {
     }
     
     @ViewBuilder
-    func AbiertoLabel(status: Estado, abierto: Bool, color: Color) -> some View {
-        if (status != .Teal && abierto) {
-            Text("Abierto")
-                .foregroundColor(color)
-        }
-    }
-    
-    @ViewBuilder
     func VarietyRow(variedad: Binding<VariedadNewS>) -> some View {
         HStack {
             if (variedad.wrappedValue.caducidad != nil) {
@@ -1000,6 +1014,25 @@ struct VarietyViewS: View {
             Spacer()
             
             numInCircle(number: variedad.wrappedValue.cantidad, color: Color(status: variedad.wrappedValue.status ?? .Verde))
+        }
+    }
+    
+    @ViewBuilder
+    func VarietyRow(variedad: VariedadNewS) -> some View {
+        HStack {
+            if (variedad.caducidad != nil) {
+                Text(variedad.caducidadString ?? "")
+            } else {
+                Text("N/A")
+            }
+            if (variedad.status != .Teal && variedad.abierto) {
+                Image(systemName: "exclamationmark.circle")
+                    .foregroundColor(Color(UIColor.systemTeal))
+            }
+            
+            Spacer()
+            
+            numInCircle(number: variedad.cantidad, color: Color(status: variedad.status ?? .Verde))
         }
     }
 }
@@ -1020,7 +1053,65 @@ struct TextView: UIViewRepresentable {
     }
 }
 
-// MARK: VariantEditView
+
+// MARK: VariantEditViewSNew
+struct VariantEditViewSNew: View {
+    @Binding var variedad: VariedadNewS
+    var onDisappear: closure
+    
+    let formatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
+    
+    var body: some View {
+        Form {
+            Section(header: Text("Cantidad")) {
+                TextField("Cantidad", value: $variedad.cantidad, formatter: formatter)
+                    .keyboardType(.numberPad)
+            }
+            
+            Section(header: Text("Caducidad")) {
+                if (variedad.caducidad == nil) {
+                    Text("Esta variedad no tiene caducidad.")
+                    
+                    if #available(iOS 15.0, *) {
+                        CompatibleButton(action: {
+                            variedad.caducidad = Date()
+                        }, label: AnyView(Group {
+                            Image(systemName: "plus.circle")
+                            Text("Agregar")
+                        }), buttonStyle: .bordered, controlProminence: .standard)
+                    } else {
+                        // Fallback on earlier versions
+                        CompatibleButton(action: {
+                            variedad.caducidad = Date()
+                        }, label: AnyView(Group {
+                            Image(systemName: "plus.circle")
+                            Text("Agregar")
+                        }))
+                    }
+                } else {
+                    if variedad.caducidad != nil {
+                        DatePicker(selection: $variedad.caducidad.toNonOptional(), displayedComponents: .date) {
+                            EmptyView()
+                        }
+                        .datePickerStyle(.graphical)
+                    }
+                }
+            }
+        }
+        .onDisappear {
+            print("Variety edit view disappearing...")
+            print("Variety quantity: \(variedad.cantidad)")
+            //onDisappear(variedad)
+            onDisappear()
+        }
+    }
+}
+
+// MARK: VariantEditViewS
 //@available(iOS 15.0, *)
 struct VariantEditViewS: View {
     @State var variedad: VariedadNewS

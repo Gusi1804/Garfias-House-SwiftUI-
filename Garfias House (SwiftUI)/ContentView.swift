@@ -12,14 +12,11 @@ struct ContentView: View {
         TabView {
             if #available(iOS 15.0, *) {
                 //Articulos_New()
-                
                 ItemsNewS()
                     .tabItem {
                         Image(systemName: "archivebox")
                         Text("Artículos")
                     }
-                
-                
             } else {
                 ItemsNewSCompatible()
                     .tabItem {
