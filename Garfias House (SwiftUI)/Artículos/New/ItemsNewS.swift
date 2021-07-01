@@ -917,9 +917,11 @@ struct VarietyViewS: View {
                         // Fallback on earlier versions
                         VStack {
                             NavigationLink(destination: VariantEditViewS(variedad: variedad, onDisappear: { variety in
+                                print("ItemDetail, variety quantity: \(variedad.cantidad)")
                                 editing = false
                                 
                                 $variedad.wrappedValue = variety
+                                print("ItemDetail, variety quantity: \(variedad.cantidad)")
                             }).onAppear(perform: {
                                 editing = true
                             }).onDisappear(perform: {
@@ -1068,6 +1070,8 @@ struct VariantEditViewS: View {
             }
         }
         .onDisappear {
+            print("Variety edit view disappearing...")
+            print("Variety quantity: \(variedad.cantidad)")
             onDisappear(variedad)
         }
     }
