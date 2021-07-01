@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3AEE8C29254B91A5007B01E0"
+               BuildableName = "Garfias House (SwiftUI).app"
+               BlueprintName = "Garfias House (SwiftUI)"
+               ReferencedContainer = "container:Garfias House (SwiftUI).xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3AEE8C29254B91A5007B01E0"
+            BuildableName = "Garfias House (SwiftUI).app"
+            BlueprintName = "Garfias House (SwiftUI)"
+            ReferencedContainer = "container:Garfias House (SwiftUI).xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
