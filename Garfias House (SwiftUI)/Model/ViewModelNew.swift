@@ -611,6 +611,7 @@ class ItemsViewModelNewS: ObservableObject {
                             if (diff.type == .modified) {
                                 print("Modified item: \(diff.document.data())")
                                 
+                                /*
                                 let count = self.items.all.filter({$0.id == item.id}).count
                                 
                                 if count == 1 {
@@ -622,6 +623,13 @@ class ItemsViewModelNewS: ObservableObject {
                                 } else {
                                     print("instances of this item: \(count)")
                                     self.items.all.removeAll(where: {$0.id == item.id})
+                                    self.items.all.append(item)
+                                }
+                                 */
+                                
+                                if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
+                                    self.items.all[i] = item
+                                } else {
                                     self.items.all.append(item)
                                 }
                             }

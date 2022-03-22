@@ -866,14 +866,17 @@ struct VarietyViewS: View {
                 ForEach($item.variedades) { $variedad in
                     if #available(iOS 15.0, *) {
                         VStack {
-                            /*
+                            
                             NavigationLink(destination: VariantEditViewS(variedad: variedad, onDisappear: { variety in
                                 print("ItemDetail, variety quantity: \(variedad.cantidad)")
                                 editing = false
+                                DispatchQueue.main.async {
+                                    $variedad.wrappedValue = variety
+                                    print("ItemDetail, variety quantity: \(variedad.cantidad)")
+                                    item.setStatusForVarieties()
+                                }
                                 
-                                $variedad.wrappedValue = variety
-                                print("ItemDetail, variety quantity: \(variedad.cantidad)")
-                                item.setStatusForVarieties()
+                                
                             }).onAppear(perform: {
                                 editing = true
                             }).onDisappear(perform: {
@@ -881,10 +884,10 @@ struct VarietyViewS: View {
                             })) {
                                 VarietyRow(variedad: variedad)
                             
-                            
+                                numInCircle(number: variedad.cantidad, color: Color(status: variedad.status ?? .Verde))
                             }
-                             */
-                            
+                             
+                            /*
                             NavigationLink(destination: VariantEditViewSNew(variedad: $variedad, onDisappear: {
                                 print("ItemDetail, variety quantity: \(variedad.cantidad)")
                                 editing = false
@@ -898,6 +901,7 @@ struct VarietyViewS: View {
                             })) {
                                 VarietyRow(variedad: $variedad)
                             }
+                             */
                         }
                         .swipeActions {
                             Button(action: {
@@ -1068,7 +1072,11 @@ struct VariantEditViewSNew: View {
     var body: some View {
         Form {
             Section(header: Text("Cantidad")) {
+                
                 TextField("Cantidad", value: $variedad.cantidad, formatter: formatter)
+                    .keyboardType(.numberPad)
+                 
+                TextField("Cantidad", text: $variedad.cantidadString)
                     .keyboardType(.numberPad)
             }
             
@@ -1126,7 +1134,11 @@ struct VariantEditViewS: View {
     var body: some View {
         Form {
             Section(header: Text("Cantidad")) {
+                /*
                 TextField("Cantidad", value: $variedad.cantidad, formatter: formatter)
+                    .keyboardType(.numberPad)
+                 */
+                TextField("Cantidad", text: $variedad.cantidadString)
                     .keyboardType(.numberPad)
             }
             

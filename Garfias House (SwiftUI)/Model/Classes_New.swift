@@ -150,7 +150,6 @@ struct ItemNewS: Hashable, Codable, Identifiable {
         var teal = 0
         var green = 0
         
-        
         self.variedades = self.variedades.map({ variedad in
             var tmp = variedad
             
@@ -227,7 +226,7 @@ struct ItemNewS: Hashable, Codable, Identifiable {
 
 // MARK: VariedadNewS
 //@available(iOS 15.0, *)
-struct VariedadNewS: Hashable, Codable, Identifiable, Comparable {
+struct VariedadNewS: Hashable, Codable, Identifiable {
     
     init(cantidad: Int = 1, abierto: Bool = false, caducidad: Date? = nil, id: String = "") {
         self.cantidad = cantidad
@@ -274,7 +273,7 @@ struct VariedadNewS: Hashable, Codable, Identifiable, Comparable {
     static func == (lhs: VariedadNewS, rhs: VariedadNewS) -> Bool {
         return lhs.caducidad == rhs.caducidad && lhs.cantidad == rhs.cantidad && lhs.abierto == rhs.abierto && lhs.id == rhs.id && lhs.status == rhs.status && lhs.color == rhs.color
     }
-    
+    /*
     static func < (lhs: VariedadNewS, rhs: VariedadNewS) -> Bool {
         if let lhsStat = lhs.status, let rhsStat = rhs.status {
             if let lhsCad = lhs.caducidad, let rhsCad = lhs.caducidad {
@@ -286,6 +285,7 @@ struct VariedadNewS: Hashable, Codable, Identifiable, Comparable {
             return true
         }
     }
+     */
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
@@ -303,6 +303,20 @@ struct VariedadNewS: Hashable, Codable, Identifiable, Comparable {
     var abierto = false
     
     var id: Identifier
+    
+    var cantidadString: String {
+        set {
+            if let cantidad = Int(newValue) {
+                self.cantidad = cantidad
+            } else {
+                self.cantidad = 0
+            }
+        }
+        
+        get {
+            return String(cantidad)
+        }
+    }
     
     var caducidad: Date? {
         get {
@@ -559,33 +573,6 @@ struct ItemStoreS {
     
     mutating func sortAll() {
         _all.sort(by: {$0.nombre < $1.nombre})
-        
-        /*
-        _all.map({ item in
-            var filtered = all.filter({$0.id == item.id})
-            if filtered.count != 1 {
-                for itemRepeated in filtered {
-                    if itemRepeated == item {
-                        if let i = all.firstIndex(of: itemRepeated) {
-                            all.remove(at: i)
-                            
-                            if let x = filtered.firstIndex(of: itemRepeated) {
-                                filtered.remove(at: x)
-                            }
-                        }
-                        
-                        if filtered.count == 1 {
-                            break
-                        }
-                    }
-                }
-                
-                //return item
-            } else {
-                //return item
-            }
-        })
-         */
     }
 }
 
