@@ -64,53 +64,42 @@ class CartViewModelNew: ObservableObject {
                     }
                     
                     switch result {
-                    case .success(let item):
-                        if var item = item {
-                            // An `Item` value was successfully initialized from the DocumentSnapshot.
+                    case .success(var item):
+                        // An `Item` value was successfully initialized from the DocumentSnapshot.
+                        
+                        item.id = Identifier(string: diff.document.documentID) //Set item id
+                        print("ID: \(item.id.string)")
+                        
+                        if let itemNew = self.items.all.first(where: {$0.id == item.id}) {
+                            item.item = itemNew
                             
-                            item.id = Identifier(string: diff.document.documentID) //Set item id
-                            print("ID: \(item.id.string)")
-                            
-                            if let itemNew = self.items.all.first(where: {$0.id == item.id}) {
-                                item.item = itemNew
-                                
-                                if (diff.type == .added) {
-                                    print("New item: \(diff.document.data())")
-                                    if !self.cartItems.all.contains(item) {
-                                        self.cartItems.all.append(item)
-                                    }
+                            if (diff.type == .added) {
+                                print("New item: \(diff.document.data())")
+                                if !self.cartItems.all.contains(item) {
+                                    self.cartItems.all.append(item)
                                 }
-                                if (diff.type == .removed) {
-                                    print("Removed item: \(diff.document.data())")
-                                    
-                                    if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
-                                        self.cartItems.all.remove(at: i)
-                                    }
-                                }
-                                if (diff.type == .modified) {
-                                    print("Modified item: \(diff.document.data())")
-                                    
-                                    if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
-                                        self.cartItems.all[i] = item
-                                    } else {
-                                        self.cartItems.all.append(item)
-                                    }
-                                }
-                                
-                                success()
-                            } else {
-                                errorF()
                             }
-                        } else {
-                            // A nil value was successfully initialized from the DocumentSnapshot,
-                            // or the DocumentSnapshot was nil.
-                            print("Document does not exist")
+                            if (diff.type == .removed) {
+                                print("Removed item: \(diff.document.data())")
+                                
+                                if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
+                                    self.cartItems.all.remove(at: i)
+                                }
+                            }
+                            if (diff.type == .modified) {
+                                print("Modified item: \(diff.document.data())")
+                                
+                                if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
+                                    self.cartItems.all[i] = item
+                                } else {
+                                    self.cartItems.all.append(item)
+                                }
+                            }
                             
-                            errorF()
+                            success()
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         // An `ItemNew` value could not be initialized from the DocumentSnapshot.
-                        print("Error decoding city: \(error)")
                         errorF()
                     }
                 }

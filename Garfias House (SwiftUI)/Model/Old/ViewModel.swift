@@ -35,26 +35,18 @@ class CartViewModel: ObservableObject {
                     }
                     switch result {
                     case .success(let item):
-                        if let item = item {
-                            // An `Item` value was successfully initialized from the DocumentSnapshot.
-                            //print("Item: \(item)")
-                            var index = 0
-                            
-                            item.iD = document.documentID
-                            
-                            //item.getStatus()
-                            //item.getGlobalNumbers()
-                            //print("\(item.greenN)")
-                            self.items.append(item)
-                            
-                            success()
-                        } else {
-                            // A nil value was successfully initialized from the DocumentSnapshot,
-                            // or the DocumentSnapshot was nil.
-                            print("Document does not exist")
-                            
-                            errorF()
-                        }
+                        // An `Item` value was successfully initialized from the DocumentSnapshot.
+                        //print("Item: \(item)")
+                        var index = 0
+                        
+                        item.iD = document.documentID
+                        
+                        //item.getStatus()
+                        //item.getGlobalNumbers()
+                        //print("\(item.greenN)")
+                        self.items.append(item)
+                        
+                        success()
                     case .failure(let error):
                         // A `City` value could not be initialized from the DocumentSnapshot.
                         print("Error decoding city: \(error)")
@@ -113,26 +105,18 @@ class ItemsViewModel: ObservableObject {
                     }
                     switch result {
                     case .success(let item):
-                        if let item = item {
-                            // An `Item` value was successfully initialized from the DocumentSnapshot.
-                            //print("Item: \(item)")
-                            var index = 0
-                            
-                            item.iD = document.documentID
-                            
-                            item.getStatus()
-                            item.getGlobalNumbers()
-                            print("\(item.greenN)")
-                            self.items.append(item)
-                            
-                            success()
-                        } else {
-                            // A nil value was successfully initialized from the DocumentSnapshot,
-                            // or the DocumentSnapshot was nil.
-                            print("Document does not exist")
-                            
-                            errorF()
-                        }
+                        // An `Item` value was successfully initialized from the DocumentSnapshot.
+                        //print("Item: \(item)")
+                        var index = 0
+                        
+                        item.iD = document.documentID
+                        
+                        item.getStatus()
+                        item.getGlobalNumbers()
+                        print("\(item.greenN)")
+                        self.items.append(item)
+                        
+                        success()
                     case .failure(let error):
                         // A `City` value could not be initialized from the DocumentSnapshot.
                         print("Error decoding city: \(error)")
@@ -206,26 +190,18 @@ class ItemsViewModel: ObservableObject {
                         }
                         switch result {
                         case .success(let item):
-                            if let item = item {
-                                // An `Item` value was successfully initialized from the DocumentSnapshot.
-                                //print("Item: \(item)")
-                                
-                                item.iD = document.documentID
-                                
-                                item.getStatus()
-                                item.getGlobalNumbers()
-                                //print("\(item.greenN)")
-                                
-                                self.item = item
-                                
-                                success()
-                            } else {
-                                // A nil value was successfully initialized from the DocumentSnapshot,
-                                // or the DocumentSnapshot was nil.
-                                print("Document does not exist")
-                                
-                                errorF()
-                            }
+                            // An `Item` value was successfully initialized from the DocumentSnapshot.
+                            //print("Item: \(item)")
+                            
+                            item.iD = document.documentID
+                            
+                            item.getStatus()
+                            item.getGlobalNumbers()
+                            //print("\(item.greenN)")
+                            
+                            self.item = item
+                            
+                            success()
                         case .failure(let error):
                             // A `City` value could not be initialized from the DocumentSnapshot.
                             print("Error decoding item: \(error)")
@@ -253,26 +229,18 @@ class ItemsViewModel: ObservableObject {
                 }
                 switch result {
                 case .success(let item):
-                    if let item = item {
-                        // An `Item` value was successfully initialized from the DocumentSnapshot.
-                        //print("Item: \(item)")
-                        
-                        item.iD = document.documentID
-                        
-                        item.getStatus()
-                        item.getGlobalNumbers()
-                        //print("\(item.greenN)")
-                        
-                        self.item = item
-                        
-                        success()
-                    } else {
-                        // A nil value was successfully initialized from the DocumentSnapshot,
-                        // or the DocumentSnapshot was nil.
-                        print("Document does not exist")
-                        
-                        errorF()
-                    }
+                    // An `Item` value was successfully initialized from the DocumentSnapshot.
+                    //print("Item: \(item)")
+                    
+                    item.iD = document.documentID
+                    
+                    item.getStatus()
+                    item.getGlobalNumbers()
+                    //print("\(item.greenN)")
+                    
+                    self.item = item
+                    
+                    success()
                 case .failure(let error):
                     // A `City` value could not be initialized from the DocumentSnapshot.
                     print("Error decoding item: \(error)")

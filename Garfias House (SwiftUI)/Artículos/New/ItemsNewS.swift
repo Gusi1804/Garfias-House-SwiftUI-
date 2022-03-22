@@ -42,6 +42,10 @@ struct ItemsNewS: View {
         vm.deleteItem(item)
     }
     
+    func resetItemNew(item: ItemNewS) {
+        self.newItem = ItemNewS(empty: true)
+    }
+    
     func handleScan(result: Result<String, CodeScannerView.ScanError>) {
         switch result {
         case .success(let code):
@@ -96,7 +100,7 @@ struct ItemsNewS: View {
                     }
                 case .AddingItem:
                     NavigationView {
-                        DetailViewS(item: $newItem, categoría: .Abarrotes, addingItem: true, vm: $vm, onDisappear: saveChanges(item:))
+                        DetailViewS(item: $newItem, categoría: .Abarrotes, addingItem: true, vm: $vm, onDisappear: resetItemNew(item:))
                             .navigationBarTitle(Text(newItem.nombre + " " + newItem.contenido), displayMode: .inline)
                     }
                 case .ScanningItem:
@@ -175,6 +179,8 @@ struct ItemsNewS: View {
                 }, success: {
                     //Success
                     self.items = vm.items
+                    
+                    print("Finished loading all items for the first time...")
                 })
             }
         }
@@ -750,7 +756,6 @@ struct DetailViewS: View {
                             Text("Guardar Cambios al Artículo")
                         }
                         .buttonStyle(.bordered)
-                        .controlProminence(.increased)
                     } else {
                         // Fallback on earlier versions
                         CompatibleButton(action: {
@@ -884,7 +889,7 @@ struct VarietyViewS: View {
                             })) {
                                 VarietyRow(variedad: variedad)
                             
-                                numInCircle(number: variedad.cantidad, color: Color(status: variedad.status ?? .Verde))
+                                //numInCircle(number: variedad.cantidad, color: Color(status: variedad.status ?? .Verde))
                             }
                              
                             /*
@@ -1190,7 +1195,6 @@ func CompatibleButton(action: @escaping () -> Void, label: AnyView, buttonStyle:
         label
     }
     .buttonStyle(buttonStyle)
-    .controlProminence(controlProminence)
 }
 
 @ViewBuilder

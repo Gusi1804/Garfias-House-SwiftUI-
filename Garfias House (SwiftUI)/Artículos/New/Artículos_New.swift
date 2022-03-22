@@ -414,7 +414,6 @@ struct DetailView: View {
                         Text("Guardar Artículo")
                     }
                     .buttonStyle(.bordered)
-                    .controlProminence(.increased)
                     Spacer()
                 }) {
                     EmptyView()
@@ -434,7 +433,6 @@ struct DetailView: View {
                         Text("Guardar Cambios al Artículo")
                     }
                     .buttonStyle(.bordered)
-                    .controlProminence(.increased)
                     Spacer()
                 }) {
                     EmptyView()
@@ -497,7 +495,6 @@ struct VarietyView: View {
                 Text("Agregar")
             }
             .buttonStyle(.bordered)
-            .controlProminence(.standard)
         }) {
             HStack {
                 Text("Caducidad")
@@ -561,7 +558,6 @@ struct VariantEditView: View {
                         Text("Agregar")
                     }
                     .buttonStyle(.bordered)
-                    .controlProminence(.standard)
                 } else {
                     if variedad.caducidad != nil {
                         DatePicker(selection: $variedad.caducidad.toNonOptional(), displayedComponents: .date) {

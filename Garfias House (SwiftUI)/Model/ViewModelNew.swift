@@ -116,38 +116,28 @@ class ItemsViewModelNew: ObservableObject {
                     
                     switch result {
                     case .success(let item):
-                        if let item = item {
-                            // An `Item` value was successfully initialized from the DocumentSnapshot.
-                            
-                            item.id = diff.document.documentID //Set item id
-                            item.setStatusForVarieties()
-                            
-                            if (diff.type == .added) {
-                                print("New item: \(diff.document.data())")
-                                self.items.all.append(item)
-                            }
-                            if (diff.type == .removed) {
-                                print("Removed item: \(diff.document.data())")
-                                
-                                if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
-                                    self.items.all.remove(at: i)
-                                }
-                            }
-                            if (diff.type == .modified) {
-                                print("Modified item: \(diff.document.data())")
-                                
-                                self.deleteItem(item)
-                                self.addItem(item, randomID: false)
-                            }
-                            
-                            success()
-                        } else {
-                            // A nil value was successfully initialized from the DocumentSnapshot,
-                            // or the DocumentSnapshot was nil.
-                            print("Document does not exist")
-                            
-                            errorF()
+                        item.id = diff.document.documentID //Set item id
+                        item.setStatusForVarieties()
+                        
+                        if (diff.type == .added) {
+                            print("New item: \(diff.document.data())")
+                            self.items.all.append(item)
                         }
+                        if (diff.type == .removed) {
+                            print("Removed item: \(diff.document.data())")
+                            
+                            if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
+                                self.items.all.remove(at: i)
+                            }
+                        }
+                        if (diff.type == .modified) {
+                            print("Modified item: \(diff.document.data())")
+                            
+                            self.deleteItem(item)
+                            self.addItem(item, randomID: false)
+                        }
+                        
+                        success()
                     case .failure(let error):
                         // An `ItemNew` value could not be initialized from the DocumentSnapshot.
                         print("Error decoding city: \(error)")
@@ -241,27 +231,19 @@ class ItemsViewModelNew: ObservableObject {
                             }
                             switch result {
                             case .success(let item):
-                                if let item = item {
-                                    // An `Item` value was successfully initialized from the DocumentSnapshot.
-                                    //print("Item: \(item)")
-                                    
-                                    item.id = document.documentID //Set item id
-                                    item.setStatusForVarieties()
-                                    
-                                    self.item = item
-                                    
-                                    success()
-                                } else {
-                                    // A nil value was successfully initialized from the DocumentSnapshot,
-                                    // or the DocumentSnapshot was nil.
-                                    print("Document does not exist")
-                                    
-                                    noMatches()
-                                }
+                                // An `Item` value was successfully initialized from the DocumentSnapshot.
+                                //print("Item: \(item)")
+                                
+                                item.id = document.documentID //Set item id
+                                item.setStatusForVarieties()
+                                
+                                self.item = item
+                                
+                                success()
                             case .failure(let error):
                                 // An `Item` value could not be initialized from the DocumentSnapshot.
                                 print("Error decoding item: \(error)")
-                                errorFunction()
+                                noMatches()
                             }
                         }
                         
@@ -281,23 +263,15 @@ class ItemsViewModelNew: ObservableObject {
                     }
                     switch result {
                     case .success(let item):
-                        if let item = item {
-                            // An `Item` value was successfully initialized from the DocumentSnapshot.
-                            //print("Item: \(item)")
-                            
-                            item.id = document.documentID //Set item id
-                            item.setStatusForVarieties()
-                            
-                            self.item = item
-                            
-                            success()
-                        } else {
-                            // A nil value was successfully initialized from the DocumentSnapshot,
-                            // or the DocumentSnapshot was nil.
-                            print("Document does not exist")
-                            
-                            errorFunction()
-                        }
+                        // An `Item` value was successfully initialized from the DocumentSnapshot.
+                        //print("Item: \(item)")
+                        
+                        item.id = document.documentID //Set item id
+                        item.setStatusForVarieties()
+                        
+                        self.item = item
+                        
+                        success()
                     case .failure(let error):
                         // An `Item` value could not be initialized from the DocumentSnapshot.
                         print("Error decoding item: \(error)")
@@ -589,59 +563,52 @@ class ItemsViewModelNewS: ObservableObject {
                     }
                     
                     switch result {
-                    case .success(let item):
-                        if var item = item {
-                            // An `Item` value was successfully initialized from the DocumentSnapshot.
+                    case .success(var item):
+                        // An `Item` value was successfully initialized from the DocumentSnapshot.
+                        
+                        item.id = Identifier(string: diff.document.documentID) //Set item id
+                        print("ID: \(item.id.string)")
+                        item.setStatusForVarieties()
+                        
+                        if (diff.type == .added) {
+                            print("New item: \(diff.document.data())")
+                            self.items.all.append(item)
+                        }
+                        if (diff.type == .removed) {
+                            print("Removed item: \(diff.document.data())")
                             
-                            item.id = Identifier(string: diff.document.documentID) //Set item id
-                            print("ID: \(item.id.string)")
-                            item.setStatusForVarieties()
+                            if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
+                                self.items.all.remove(at: i)
+                            }
+                        }
+                        if (diff.type == .modified) {
+                            print("Modified item: \(diff.document.data())")
                             
-                            if (diff.type == .added) {
-                                print("New item: \(diff.document.data())")
-                                self.items.all.append(item)
-                            }
-                            if (diff.type == .removed) {
-                                print("Removed item: \(diff.document.data())")
-                                
-                                if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
-                                    self.items.all.remove(at: i)
-                                }
-                            }
-                            if (diff.type == .modified) {
-                                print("Modified item: \(diff.document.data())")
-                                
-                                /*
-                                let count = self.items.all.filter({$0.id == item.id}).count
-                                
-                                if count == 1 {
-                                    if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
-                                        self.items.all[i] = item
-                                    } else {
-                                        self.items.all.append(item)
-                                    }
-                                } else {
-                                    print("instances of this item: \(count)")
-                                    self.items.all.removeAll(where: {$0.id == item.id})
-                                    self.items.all.append(item)
-                                }
-                                 */
-                                
+                            /*
+                            let count = self.items.all.filter({$0.id == item.id}).count
+                            
+                            if count == 1 {
                                 if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
                                     self.items.all[i] = item
                                 } else {
                                     self.items.all.append(item)
                                 }
+                            } else {
+                                print("instances of this item: \(count)")
+                                self.items.all.removeAll(where: {$0.id == item.id})
+                                self.items.all.append(item)
                             }
+                             */
                             
-                            success()
-                        } else {
-                            // A nil value was successfully initialized from the DocumentSnapshot,
-                            // or the DocumentSnapshot was nil.
-                            print("Document does not exist")
-                            
-                            errorF()
+                            if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
+                                self.items.all[i] = item
+                            } else {
+                                self.items.all.append(item)
+                            }
                         }
+                        
+                        print("Finished loading item \(item.nombre)")
+                        success()
                     case .failure(let error):
                         // An `ItemNew` value could not be initialized from the DocumentSnapshot.
                         print("Error decoding city: \(error)")
@@ -734,28 +701,20 @@ class ItemsViewModelNewS: ObservableObject {
                                 try document.data(as: ItemNewS.self)
                             }
                             switch result {
-                            case .success(let item):
-                                if var item = item {
-                                    // An `Item` value was successfully initialized from the DocumentSnapshot.
-                                    //print("Item: \(item)")
-                                    
-                                    item.id = Identifier(string: document.documentID) //Set item id
-                                    item.setStatusForVarieties()
-                                    
-                                    self.item = item
-                                    
-                                    success()
-                                } else {
-                                    // A nil value was successfully initialized from the DocumentSnapshot,
-                                    // or the DocumentSnapshot was nil.
-                                    print("Document does not exist")
-                                    
-                                    noMatches()
-                                }
+                            case .success(var item):
+                                // An `Item` value was successfully initialized from the DocumentSnapshot.
+                                //print("Item: \(item)")
+                                
+                                item.id = Identifier(string: document.documentID) //Set item id
+                                item.setStatusForVarieties()
+                                
+                                self.item = item
+                                
+                                success()
                             case .failure(let error):
                                 // An `Item` value could not be initialized from the DocumentSnapshot.
                                 print("Error decoding item: \(error)")
-                                errorFunction()
+                                noMatches()
                             }
                         }
                         
@@ -774,24 +733,16 @@ class ItemsViewModelNewS: ObservableObject {
                         try document.data(as: ItemNewS.self)
                     }
                     switch result {
-                    case .success(let item):
-                        if var item = item {
-                            // An `Item` value was successfully initialized from the DocumentSnapshot.
-                            //print("Item: \(item)")
-                            
-                            item.id = Identifier(string: document.documentID) //Set item id
-                            item.setStatusForVarieties()
-                            
-                            self.item = item
-                            
-                            success()
-                        } else {
-                            // A nil value was successfully initialized from the DocumentSnapshot,
-                            // or the DocumentSnapshot was nil.
-                            print("Document does not exist")
-                            
-                            errorFunction()
-                        }
+                    case .success(var item):
+                        // An `Item` value was successfully initialized from the DocumentSnapshot.
+                        //print("Item: \(item)")
+                        
+                        item.id = Identifier(string: document.documentID) //Set item id
+                        item.setStatusForVarieties()
+                        
+                        self.item = item
+                        
+                        success()
                     case .failure(let error):
                         // An `Item` value could not be initialized from the DocumentSnapshot.
                         print("Error decoding item: \(error)")
