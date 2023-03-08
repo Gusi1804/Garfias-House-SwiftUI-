@@ -43,7 +43,7 @@
 		3A092871259A822E003609C0 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		3A41597F254CB867001EC131 /* AddVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVariant.swift; sourceTree = "<group>"; };
 		3AE29A68255DBA4C00D04B1A /* Garfias House (SwiftUI).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Garfias House (SwiftUI).entitlements"; sourceTree = "<group>"; };
-		3AEE8C2A254B91A5007B01E0 /* G House (iOS 15, *).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "G House (iOS 15, *).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AEE8C2A254B91A5007B01E0 /* G House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "G House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEE8C2D254B91A5007B01E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEE8C2F254B91A5007B01E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3AEE8C31254B91A5007B01E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		3AEE8C2B254B91A5007B01E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3AEE8C2A254B91A5007B01E0 /* G House (iOS 15, *).app */,
+				3AEE8C2A254B91A5007B01E0 /* G House.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,9 +236,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3AEE8C29254B91A5007B01E0 /* G House (iOS 15, *) */ = {
+		3AEE8C29254B91A5007B01E0 /* G House */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3AEE8C3E254B91A7007B01E0 /* Build configuration list for PBXNativeTarget "G House (iOS 15, *)" */;
+			buildConfigurationList = 3AEE8C3E254B91A7007B01E0 /* Build configuration list for PBXNativeTarget "G House" */;
 			buildPhases = (
 				3AEE8C26254B91A5007B01E0 /* Sources */,
 				3AEE8C27254B91A5007B01E0 /* Frameworks */,
@@ -248,7 +248,7 @@
 			);
 			dependencies = (
 			);
-			name = "G House (iOS 15, *)";
+			name = "G House";
 			packageProductDependencies = (
 				3AEE8C92254BAA2E007B01E0 /* CodeScanner */,
 				CAFC8F1E267E737B00E0D51B /* FirebaseFirestore */,
@@ -256,7 +256,7 @@
 				CA909C6A29B8128C0039A122 /* FirebaseFirestoreSwift */,
 			);
 			productName = "Garfias House (SwiftUI)";
-			productReference = 3AEE8C2A254B91A5007B01E0 /* G House (iOS 15, *).app */;
+			productReference = 3AEE8C2A254B91A5007B01E0 /* G House.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -290,7 +290,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3AEE8C29254B91A5007B01E0 /* G House (iOS 15, *) */,
+				3AEE8C29254B91A5007B01E0 /* G House */,
 			);
 		};
 /* End PBXProject section */
@@ -546,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3AEE8C3E254B91A7007B01E0 /* Build configuration list for PBXNativeTarget "G House (iOS 15, *)" */ = {
+		3AEE8C3E254B91A7007B01E0 /* Build configuration list for PBXNativeTarget "G House" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3AEE8C3F254B91A7007B01E0 /* Debug */,
@@ -563,7 +563,7 @@
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.6;
+				minimumVersion = 1.0.0;
 			};
 		};
 		CAFC8F1D267E737B00E0D51B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
