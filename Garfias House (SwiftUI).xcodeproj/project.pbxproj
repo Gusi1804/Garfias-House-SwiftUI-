@@ -26,37 +26,18 @@
 		CA087E7B26826CD800AEDB80 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA087E7A26826CD800AEDB80 /* ImagePicker.swift */; };
 		CA3BAECB2674647200374582 /* ViewModelNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BAECA2674647200374582 /* ViewModelNew.swift */; };
 		CA4C00D0268A94B800451899 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C00CF268A94B800451899 /* SearchBar.swift */; };
-		CA4C00D9268A970200451899 /* G_House_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C00D8268A970200451899 /* G_House_Tests.swift */; };
-		CA4C00E6268A985500451899 /* Classes_NewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C00E5268A985500451899 /* Classes_NewTests.swift */; };
 		CA5494B427EA7FFE0014FD98 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5494B327EA7FFE0014FD98 /* Scan.swift */; };
 		CA64A4B026841C5300696D9B /* ItemsNewS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64A4AF26841C5300696D9B /* ItemsNewS.swift */; };
 		CA77850F26895FAC006B4B6E /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77850E26895FAC006B4B6E /* AsyncImage.swift */; };
 		CA77853D26897B50006B4B6E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA77853B268979ED006B4B6E /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CA7CA8392673F6CE00871047 /* Artículos_New.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7CA8382673F6CE00871047 /* Artículos_New.swift */; };
 		CA7CA83B2673F71A00871047 /* Classes_New.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7CA83A2673F71A00871047 /* Classes_New.swift */; };
+		CA909C6B29B8128C0039A122 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA909C6A29B8128C0039A122 /* FirebaseFirestoreSwift */; };
 		CACE95892689A36700F33413 /* ClassesNew_Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE95882689A36700F33413 /* ClassesNew_Cart.swift */; };
 		CACE958C2689A63200F33413 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE958B2689A63200F33413 /* CartViewModel.swift */; };
 		CACE958E2689AA8A00F33413 /* ShoppingCartNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE958D2689AA8A00F33413 /* ShoppingCartNew.swift */; };
 		CAFC8F1F267E737B00E0D51B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CAFC8F1E267E737B00E0D51B /* FirebaseFirestore */; };
-		CAFC8F21267E737B00E0D51B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CAFC8F20267E737B00E0D51B /* FirebaseFirestoreSwift-Beta */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CA4C00DA268A970200451899 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AEE8C22254B91A5007B01E0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3AEE8C29254B91A5007B01E0;
-			remoteInfo = "G House (iOS 15, *)";
-		};
-		CA4C00E7268A985500451899 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AEE8C22254B91A5007B01E0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3AEE8C29254B91A5007B01E0;
-			remoteInfo = "G House (iOS 15, *)";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A092871259A822E003609C0 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
@@ -80,9 +61,7 @@
 		CA087E7A26826CD800AEDB80 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CA3BAECA2674647200374582 /* ViewModelNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNew.swift; sourceTree = "<group>"; };
 		CA4C00CF268A94B800451899 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		CA4C00D6268A970200451899 /* G House Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "G House Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4C00D8268A970200451899 /* G_House_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_House_Tests.swift; sourceTree = "<group>"; };
-		CA4C00E3268A985500451899 /* Classes_NewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Classes_NewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4C00E5268A985500451899 /* Classes_NewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes_NewTests.swift; sourceTree = "<group>"; };
 		CA5494B327EA7FFE0014FD98 /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 		CA64A4AF26841C5300696D9B /* ItemsNewS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsNewS.swift; sourceTree = "<group>"; };
@@ -101,24 +80,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA77853D26897B50006B4B6E /* SwiftUI.framework in Frameworks */,
-				CAFC8F21267E737B00E0D51B /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				CA087E7926826A7100AEDB80 /* FirebaseStorage in Frameworks */,
 				3AEE8C93254BAA2E007B01E0 /* CodeScanner in Frameworks */,
 				CAFC8F1F267E737B00E0D51B /* FirebaseFirestore in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA4C00D3268A970200451899 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA4C00E0268A985500451899 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				CA909C6B29B8128C0039A122 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,8 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				3AEE8C2A254B91A5007B01E0 /* G House (iOS 15, *).app */,
-				CA4C00D6268A970200451899 /* G House Tests.xctest */,
-				CA4C00E3268A985500451899 /* Classes_NewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,48 +252,12 @@
 			packageProductDependencies = (
 				3AEE8C92254BAA2E007B01E0 /* CodeScanner */,
 				CAFC8F1E267E737B00E0D51B /* FirebaseFirestore */,
-				CAFC8F20267E737B00E0D51B /* FirebaseFirestoreSwift-Beta */,
 				CA087E7826826A7100AEDB80 /* FirebaseStorage */,
+				CA909C6A29B8128C0039A122 /* FirebaseFirestoreSwift */,
 			);
 			productName = "Garfias House (SwiftUI)";
 			productReference = 3AEE8C2A254B91A5007B01E0 /* G House (iOS 15, *).app */;
 			productType = "com.apple.product-type.application";
-		};
-		CA4C00D5268A970200451899 /* G House Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA4C00DC268A970200451899 /* Build configuration list for PBXNativeTarget "G House Tests" */;
-			buildPhases = (
-				CA4C00D2268A970200451899 /* Sources */,
-				CA4C00D3268A970200451899 /* Frameworks */,
-				CA4C00D4268A970200451899 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA4C00DB268A970200451899 /* PBXTargetDependency */,
-			);
-			name = "G House Tests";
-			productName = "G House Tests";
-			productReference = CA4C00D6268A970200451899 /* G House Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CA4C00E2268A985500451899 /* Classes_NewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA4C00E9268A985500451899 /* Build configuration list for PBXNativeTarget "Classes_NewTests" */;
-			buildPhases = (
-				CA4C00DF268A985500451899 /* Sources */,
-				CA4C00E0268A985500451899 /* Frameworks */,
-				CA4C00E1268A985500451899 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA4C00E8268A985500451899 /* PBXTargetDependency */,
-			);
-			name = Classes_NewTests;
-			productName = Classes_NewTests;
-			productReference = CA4C00E3268A985500451899 /* Classes_NewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -343,14 +270,6 @@
 				TargetAttributes = {
 					3AEE8C29254B91A5007B01E0 = {
 						CreatedOnToolsVersion = 12.2;
-					};
-					CA4C00D5268A970200451899 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 3AEE8C29254B91A5007B01E0;
-					};
-					CA4C00E2268A985500451899 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 3AEE8C29254B91A5007B01E0;
 					};
 				};
 			};
@@ -372,8 +291,6 @@
 			projectRoot = "";
 			targets = (
 				3AEE8C29254B91A5007B01E0 /* G House (iOS 15, *) */,
-				CA4C00D5268A970200451899 /* G House Tests */,
-				CA4C00E2268A985500451899 /* Classes_NewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -387,20 +304,6 @@
 				3AEE8C7C254BA733007B01E0 /* GoogleService-Info.plist in Resources */,
 				3AEE8C37254B91A7007B01E0 /* Preview Assets.xcassets in Resources */,
 				3AEE8C34254B91A7007B01E0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA4C00D4268A970200451899 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA4C00E1268A985500451899 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,36 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA4C00D2268A970200451899 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA4C00D9268A970200451899 /* G_House_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA4C00DF268A985500451899 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA4C00E6268A985500451899 /* Classes_NewTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CA4C00DB268A970200451899 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3AEE8C29254B91A5007B01E0 /* G House (iOS 15, *) */;
-			targetProxy = CA4C00DA268A970200451899 /* PBXContainerItemProxy */;
-		};
-		CA4C00E8268A985500451899 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3AEE8C29254B91A5007B01E0 /* G House (iOS 15, *) */;
-			targetProxy = CA4C00E7268A985500451899 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3AEE8C38254B91A7007B01E0 /* LaunchScreen.storyboard */ = {
@@ -529,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -584,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -660,102 +534,6 @@
 			};
 			name = Release;
 		};
-		CA4C00DD268A970200451899 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 767V5JNG6F;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "gustavogarfias.G-House-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/G House (iOS 15, *).app/G House (iOS 15, *)";
-			};
-			name = Debug;
-		};
-		CA4C00DE268A970200451899 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 767V5JNG6F;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "gustavogarfias.G-House-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/G House (iOS 15, *).app/G House (iOS 15, *)";
-			};
-			name = Release;
-		};
-		CA4C00EA268A985500451899 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 767V5JNG6F;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "gustavogarfias.Classes-NewTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/G House (iOS 15, *).app/G House (iOS 15, *)";
-			};
-			name = Debug;
-		};
-		CA4C00EB268A985500451899 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 767V5JNG6F;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "gustavogarfias.Classes-NewTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/G House (iOS 15, *).app/G House (iOS 15, *)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -773,24 +551,6 @@
 			buildConfigurations = (
 				3AEE8C3F254B91A7007B01E0 /* Debug */,
 				3AEE8C40254B91A7007B01E0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA4C00DC268A970200451899 /* Build configuration list for PBXNativeTarget "G House Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA4C00DD268A970200451899 /* Debug */,
-				CA4C00DE268A970200451899 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA4C00E9268A985500451899 /* Build configuration list for PBXNativeTarget "Classes_NewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA4C00EA268A985500451899 /* Debug */,
-				CA4C00EB268A985500451899 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -827,15 +587,15 @@
 			package = CAFC8F1D267E737B00E0D51B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
+		CA909C6A29B8128C0039A122 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAFC8F1D267E737B00E0D51B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		CAFC8F1E267E737B00E0D51B /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CAFC8F1D267E737B00E0D51B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
-		};
-		CAFC8F20267E737B00E0D51B /* FirebaseFirestoreSwift-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CAFC8F1D267E737B00E0D51B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFirestoreSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -600,11 +600,12 @@ class ItemsViewModelNewS: ObservableObject {
                             }
                              */
                             
+                            
                             if let i = self.items.all.firstIndex(where: {$0.id == item.id}) {
-                                self.items.all[i] = item
+                                self.items.all[i].update(item)
                             } else {
                                 self.items.all.append(item)
-                            }
+                            }                             
                         }
                         
                         print("Finished loading item \(item.nombre)")

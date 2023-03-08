@@ -82,6 +82,21 @@ struct ItemNewS: Hashable, Codable, Identifiable {
         self.setStatusForVarieties()
     }
     
+    mutating func update(_ new: ItemNewS) {
+        self.nombre = new.nombre
+        self.categoría = new.categoría
+        self.contenido = new.contenido
+        if let barcode = new.barcode {
+            self.barcode = barcode
+        }
+        self.variedades = new.variedades
+        self.favorito = new.favorito
+        self.quantityAlert = new.quantityAlert
+        self.expiryDateAlert = new.expiryDateAlert
+        
+        self.setStatusForVarieties()
+    }
+    
     init() {
         
     }

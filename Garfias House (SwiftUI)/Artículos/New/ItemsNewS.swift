@@ -875,11 +875,9 @@ struct VarietyViewS: View {
                             NavigationLink(destination: VariantEditViewS(variedad: variedad, onDisappear: { variety in
                                 print("ItemDetail, variety quantity: \(variedad.cantidad)")
                                 editing = false
-                                DispatchQueue.main.async {
-                                    $variedad.wrappedValue = variety
-                                    print("ItemDetail, variety quantity: \(variedad.cantidad)")
-                                    item.setStatusForVarieties()
-                                }
+                                $variedad.wrappedValue = variety
+                                print("ItemDetail, variety quantity: \(variedad.cantidad)")
+                                item.setStatusForVarieties()
                                 
                                 
                             }).onAppear(perform: {

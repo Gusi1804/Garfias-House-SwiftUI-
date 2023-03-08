@@ -260,7 +260,7 @@ struct AddItemsSheet: View {
                                 }
                             }
                         }
-                        
+/*
                         if (item.selected == true) {
 //                            HStack {
 //                                TextField("", value: item.$quantity, formatter: NumberFormatter())
@@ -275,6 +275,7 @@ struct AddItemsSheet: View {
                             }
                             
                         }
+ */
                     }
                 }
             }
