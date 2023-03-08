@@ -1236,7 +1236,7 @@ struct ItemRowS: View {
                         Text(item.nombre)
                             .bold()
                             .lineLimit(1)
-                            .minimumScaleFactor(0.5)
+                            .minimumScaleFactor(0.9)
                         Text(item.contenido)
                             .font(.subheadline)
                         if (item.alert) {
@@ -1250,7 +1250,10 @@ struct ItemRowS: View {
                             ForEach(Array(dict.keys), id: \.id) { variety in
                                 if let value = dict[variety] {
                                     //Text("\(variety.cantidad) caduca en \(value) días")
-                                    AlertForExpiryDateText(días: value, cantidad: variety.cantidad)
+                                    
+                                    if (value <= item.expiryDateAlert) {
+                                        AlertForExpiryDateText(días: value, cantidad: variety.cantidad)
+                                    }
                                 }
                             }
                         }

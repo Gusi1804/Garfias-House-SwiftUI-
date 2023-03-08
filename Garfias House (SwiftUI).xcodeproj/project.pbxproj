@@ -28,6 +28,7 @@
 		CA4C00D0268A94B800451899 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C00CF268A94B800451899 /* SearchBar.swift */; };
 		CA4C00D9268A970200451899 /* G_House_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C00D8268A970200451899 /* G_House_Tests.swift */; };
 		CA4C00E6268A985500451899 /* Classes_NewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C00E5268A985500451899 /* Classes_NewTests.swift */; };
+		CA5494B427EA7FFE0014FD98 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5494B327EA7FFE0014FD98 /* Scan.swift */; };
 		CA64A4B026841C5300696D9B /* ItemsNewS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64A4AF26841C5300696D9B /* ItemsNewS.swift */; };
 		CA77850F26895FAC006B4B6E /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77850E26895FAC006B4B6E /* AsyncImage.swift */; };
 		CA77853D26897B50006B4B6E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA77853B268979ED006B4B6E /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -83,6 +84,7 @@
 		CA4C00D8268A970200451899 /* G_House_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_House_Tests.swift; sourceTree = "<group>"; };
 		CA4C00E3268A985500451899 /* Classes_NewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Classes_NewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4C00E5268A985500451899 /* Classes_NewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes_NewTests.swift; sourceTree = "<group>"; };
+		CA5494B327EA7FFE0014FD98 /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 		CA64A4AF26841C5300696D9B /* ItemsNewS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsNewS.swift; sourceTree = "<group>"; };
 		CA77850E26895FAC006B4B6E /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		CA77853B268979ED006B4B6E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -177,6 +179,7 @@
 				3A092870259A820C003609C0 /* Lista de Compra */,
 				3A415982254CD801001EC131 /* Artículos */,
 				3AEE8C95254BB03C007B01E0 /* Model */,
+				CA5494B227EA7FD90014FD98 /* Escaneo */,
 				3AEE8C33254B91A7007B01E0 /* Assets.xcassets */,
 				3AEE8C38254B91A7007B01E0 /* LaunchScreen.storyboard */,
 				3AEE8C3B254B91A7007B01E0 /* Info.plist */,
@@ -248,6 +251,14 @@
 				CA4C00E5268A985500451899 /* Classes_NewTests.swift */,
 			);
 			path = Classes_NewTests;
+			sourceTree = "<group>";
+		};
+		CA5494B227EA7FD90014FD98 /* Escaneo */ = {
+			isa = PBXGroup;
+			children = (
+				CA5494B327EA7FFE0014FD98 /* Scan.swift */,
+			);
+			path = Escaneo;
 			sourceTree = "<group>";
 		};
 		CACE958A2689A37300F33413 /* Old */ = {
@@ -405,6 +416,7 @@
 				CACE95892689A36700F33413 /* ClassesNew_Cart.swift in Sources */,
 				3AEE8C2E254B91A5007B01E0 /* AppDelegate.swift in Sources */,
 				CA087E7B26826CD800AEDB80 /* ImagePicker.swift in Sources */,
+				CA5494B427EA7FFE0014FD98 /* Scan.swift in Sources */,
 				3AEE8C30254B91A5007B01E0 /* SceneDelegate.swift in Sources */,
 				CACE958C2689A63200F33413 /* CartViewModel.swift in Sources */,
 				3AEE8C79254BA59F007B01E0 /* View Extensions.swift in Sources */,
@@ -591,21 +603,27 @@
 				CODE_SIGN_ENTITLEMENTS = "Garfias House (SwiftUI)/Garfias House (SwiftUI).entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = G00001;
 				DEVELOPMENT_ASSET_PATHS = "\"Garfias House (SwiftUI)/Preview Content\"";
-				DEVELOPMENT_TEAM = 767V5JNG6F;
+				DEVELOPMENT_TEAM = 46A969A6K2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Garfias House (SwiftUI)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "G House";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "-DNEW";
-				PRODUCT_BUNDLE_IDENTIFIER = "garfias.Garfias-House--SwiftUI-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.garfias.ghouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -618,21 +636,27 @@
 				CODE_SIGN_ENTITLEMENTS = "Garfias House (SwiftUI)/Garfias House (SwiftUI).entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = G00001;
 				DEVELOPMENT_ASSET_PATHS = "\"Garfias House (SwiftUI)/Preview Content\"";
-				DEVELOPMENT_TEAM = 767V5JNG6F;
+				DEVELOPMENT_TEAM = 46A969A6K2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Garfias House (SwiftUI)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "G House";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "-DNEW";
-				PRODUCT_BUNDLE_IDENTIFIER = "garfias.Garfias-House--SwiftUI-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.garfias.ghouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

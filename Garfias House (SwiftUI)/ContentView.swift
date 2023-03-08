@@ -10,6 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+            if (UIDevice.current.model.hasPrefix("iPhone")) {
+                Scan()
+                    .tabItem {
+                        Image(systemName: "barcode.viewfinder")
+                        Text("Escanear")
+                    }
+            }
+            
+            
             if #available(iOS 15.0, *) {
                 //Articulos_New()
                 ItemsNewS()
